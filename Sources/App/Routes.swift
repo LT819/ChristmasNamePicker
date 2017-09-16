@@ -21,5 +21,15 @@ final class Routes: RouteCollection {
             return req.description
         }
         
+        builder.get("choose") { req in
+
+            let chooser = Chooser()
+            let names = chooser.assignGiftees(peeps: chooser.people)
+            
+            let string = names.reduce("", {partial, person in return partial + person.description})
+            
+            return string
+        }
+        
     }
 }
