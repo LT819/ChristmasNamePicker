@@ -94,7 +94,11 @@ extension Person: CustomStringConvertible {
 extension Array {
     
     func randomElement() -> Element {
+        #if os(Linux)
+        return self[Int(random()) % self.count]
+        #else
         return self[Int(arc4random()) % self.count]
+        #endif
     }
 }
 
