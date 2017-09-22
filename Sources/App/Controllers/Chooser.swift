@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if os(Linux)
+import Glibc
+#endif
+
 class Chooser {
     
     let people: [Person] = [
