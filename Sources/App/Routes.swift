@@ -21,9 +21,13 @@ final class Routes: RouteCollection {
             return req.description
         }
         
-        builder.get("choose") { req in
+        builder.get("choose",":family") { req in
 
-            let chooser = Chooser()
+            guard let family = req.parameters["family"]?.string else {
+                throw Abort.badRequest
+            }
+
+            let chooser = Chooser(family: family)
             let names = chooser.assignGiftees(peeps: chooser.people)
             
             let string = names.reduce("", {partial, person in return partial + person.description})

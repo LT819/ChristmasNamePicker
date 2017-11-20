@@ -14,7 +14,7 @@ import Glibc
 
 class Chooser {
     
-    let people: [Person] = [
+    let tomlinson: [Person] = [
         Person.init("Emily", exceptions:["David", "Little David", "Deborah", "Isaac"]),
         Person.init("David", exceptions:["Emily", "Little David", "Deborah", "Isaac"]),
         Person.init("Little David", exceptions:["David", "Emily"]),
@@ -29,6 +29,39 @@ class Chooser {
         Person.init("Peter"),
         Person.init("Abby"),
     ]
+
+    let kenniv: [Person] = [
+        Person.init("Kaity", exceptions: ["Luke"]),
+        Person.init("Luke", exceptions: ["Kaity"]),
+        Person.init("Josiah"),
+        Person.init("Jake"),
+        Person.init("Abby"),
+        Person.init("Evvy"),
+        Person.init("Josh"),
+        Person.init("Jovan"),
+    ]
+
+    var people: [Person] {
+
+        switch family {
+        case .kenniv:
+            return kenniv
+        default:
+            return tomlinson
+        }
+
+    }
+
+    enum Family: String {
+        case tomlinson
+        case kenniv
+    }
+
+    var family: Family
+
+    init(family: String) {
+        self.family = Family.init(rawValue: family)!
+    }
     
     func assignGiftees(peeps: [Person]) -> [Person] {
         
