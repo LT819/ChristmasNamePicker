@@ -132,7 +132,7 @@ extension Array {
     
     func randomElement() -> Element {
         #if os(Linux)
-        return self[Int(random()) % self.count]
+        return self[Int(Glibc.random()) % self.count]
         #else
         return self[Int(arc4random()) % self.count]
         #endif
