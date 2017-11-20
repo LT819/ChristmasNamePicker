@@ -3,8 +3,11 @@
 #export("title") { It works }
 
 #export("content") {
-	<div class="welcome">
-		<img src="/images/it-works.png">
+	<div class="button">
+		<a href="choose/kenniv">Kenniv</a>
+	</div>
+	<div class="button">
+		<a href="choose/tomlinson">Tomlinson</a>
 	</div>
 }
 
