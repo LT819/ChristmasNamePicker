@@ -15,11 +15,8 @@ import Glibc
 class Chooser {
     
     let tomlinson: [Person] = [
-        Person.init("Emily", exceptions:["David", "Little David", "Deborah", "Isaac"]),
-        Person.init("David", exceptions:["Emily", "Little David", "Deborah", "Isaac"]),
-        Person.init("Little David", exceptions:["David", "Emily"]),
-        Person.init("Deborah", exceptions:["David", "Emily"]),
-        Person.init("Isaac", exceptions:["David", "Emily"]),
+        Person.init("Emily", exceptions:["David"]),
+        Person.init("David", exceptions:["Emily"]),
         Person.init("Luke", exceptions:["Kaity"]),
         Person.init("Kaity", exceptions:["Luke"]),
         Person.init("William"),
