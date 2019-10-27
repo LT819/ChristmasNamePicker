@@ -31,7 +31,7 @@ class Chooser {
         Person.init("Kaity", exceptions: ["Luke"]),
         Person.init("Luke", exceptions: ["Kaity"]),
         Person.init("Grace", exceptions: ["Josiah"])
-        Person.init("Josiah". exception: ["Grace"]),
+        Person.init("Josiah", exceptions: ["Grace"]),
         Person.init("Jake"),
         Person.init("Abby"),
         Person.init("Evvy"),
