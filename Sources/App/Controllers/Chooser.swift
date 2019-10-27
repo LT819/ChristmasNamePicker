@@ -30,7 +30,7 @@ class Chooser {
     let kenniv: [Person] = [
         Person.init("Kaity", exceptions: ["Luke"]),
         Person.init("Luke", exceptions: ["Kaity"]),
-        Person.init("Grace", exceptions: ["Josiah"])
+        Person.init("Grace", exceptions: ["Josiah"]),
         Person.init("Josiah", exceptions: ["Grace"]),
         Person.init("Jake"),
         Person.init("Abby"),
